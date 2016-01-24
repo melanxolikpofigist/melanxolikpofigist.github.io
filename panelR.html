@@ -3,20 +3,113 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
-
+    
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
     <title>Melanxolikpofigist.GitHub.io</title>
-  </head>
-<body> 
+<style>
+body{background:url(images/pageBg.png) repeat; color:#666;}
+h1{font:normal 20px/20px Georgia, "Times New Roman", Times, serif; text-align:center; padding-top:20px;}
+p{text-align:center; padding:20px; border-bottom:#bbb dotted 3px; font:normal 13px/16px Georgia, "Times New Roman", Times, serif}
+a{;color:#999;} a:hover{color:#666;} form{ margin:0 auto;}
+/*  Скопируйте код ниже в ваш файл стилей (CSS файл)  */
 
+#search-block-form{
+	width:250px;
+	height:28px;
+	border:#c9c9c9 solid 1px;
+	background:url(images/searchBg.png) left top repeat-x;
+	box-shadow:0px 1px 0px rgba(255,255,255,0.1);
+	}
+.focus-active{
+	border-color:#aaa !important;
+	background:#fff !important;
+	}
+#search-block-form input{
+	padding:0;
+	margin:0;
+	display:block;
+	border:none;
+	outline:none;
+	background:none;
+	width:100%;
+	height:100%;
+	}
+#search-block-form .form-actions{
+	width:58px;
+	height:28px;
+	float:right;
+	border:#a8b5b9 solid 1px;
+	margin:-1px -1px 0 0;
+	background:url(images/submit.png) left top repeat;	
+	}
+#search-block-form .form-actions input:hover{
+	cursor:pointer;
+	}
+#search-block-form .form-actions input{
+	overflow:hidden;
+	font:11px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#a8b5b9;
+	}
+#search-block-form .form-item{
+	width:157px;
+	padding:0 0 0 33px;
+	float:left;
+	height:28px;
+	background:url(images/searchIcon.png) 3px 2px no-repeat;
+	}
+#search-block-form .form-item input{
+	font:13px/16px "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color:#222;
+	height:auto !important;
+	padding:6px 0;
+	}
+.placeholder{color:#cbcbcb !important;}
+
+/* Конец */
+</style>
+<!-- Если в вашем шаблоне уже подключается jquery, то дополнительно подключать его не нужно, но обязательно вставьте вторую строчку (где подключается jquery.placeholder.min.js) -->
+<script src="javascript/jquery.min.js"></script>
+<script src="javascript/jquery.placeholder.min.js"></script>
+<script>
+/*  Скопируйте код ниже в ваш js файл. (JavaScript). */
+
+$(document).ready(function(e) {
+	$("input[placeholder]").placeholder();
+	$("#search-block-form .form-item input").focus(function(){
+		$("#search-block-form").addClass("focus-active");
+			})
+	.blur(function(){
+		$("#search-block-form").removeClass("focus-active");
+	});
+});
+
+/* Конец */
+</script>
+  </head>
+<body>
+
+<form action="https://myzuka.org/search" method="post" target="_blank" id="search-block-form">
+      <div class="form-item">
+        <input type="text" id="myzuka2 "name="" value="" size="15" maxlength="128" placeholder="Найти...">
+      </div>
+      <div class="form-actions">
+        <input type="submit" id="edit-submit" name="op" value="Поиск" class="form-submit">
+      </div>
+</form>
+	
+	<form action="https://myzuka.org/search" method="post" target="_blank">    
+        <input type="text" id="myzuka1" name="SearchText" value="" placeholder="Myzuka...">
+        <input type="submit" value="Поиск" class="submit">
+	</form>
+	
+	<form action="https://myzuka.org/search" method="post" target="_blank">    
+        <input type="text" id="myzuka" name="SearchText" value="" placeholder="Myzuka...">
+        <input type="submit" value="Поиск" class="submit">
+	</form>
+	
 	<form action="http://www.google.com/search"  target="_blank">
 	<input id="google" class="search_string silver" name="q" value="Google">
 	<input class="submit" type="submit" value="Найти">
@@ -30,13 +123,6 @@
 	<form action="http://rutracker.org/forum/tracker.php"  target="_blank">
 		<input id="rutracker" class="search_string silver" name="nm" value="RuTracker">
 		<input class="submit" type="submit" value="Найти">
-	</form>
-	
-	<form action="https://myzuka.org/search" method="post" target="_blank">    
-		<div class="search-box">
-        <input type="text" autocomplete="off" class="form-text premium ui-autocomplete-input" id="myzuka" name="SearchText" value="myzuka.org">
-        <input type="submit" class="submit" value="Найти">
-		</div>
 	</form>
 	
 	<form action="http://www.kinopoisk.ru/index.php" onsubmit="var i = getElementById(&#39;kinopoisk&#39;); var value = i.value; value= escape(value); var utf, win, pos=value.indexOf(&#39;%u&#39;); while (pos &gt; -1) {utf = value.substring(pos, pos+6);win = &#39;%&#39; + (&#39;BCDEF&#39;).charAt(utf.charAt(4)) + utf.charAt(5);value = value.replace(utf, win);pos = value.indexOf(&#39;%u&#39;); } getElementById(&#39;kinopoisk1&#39;).value = value; return 0;"  target="_blank">
