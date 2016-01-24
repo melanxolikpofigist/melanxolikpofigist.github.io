@@ -5,37 +5,45 @@
     <title>Melanxolikpofigist.GitHub.io</title
 </head>
 <body>
-
+<!-- ---------------------------------- -->
+	
+	<form action="http://www.google.com/search"  target="_blank">
+		<input name="q" value="" placeholder="Google..."
+			style="
+			color: rgb(25, 25, 25); 
+			border: 1px solid rgb(100, 100, 100); 
+			padding: 5px 2px 5px 30px; 
+			background: url(images/google.png) no-repeat scroll 1% 50% rgb(240, 240, 240);">
+	</form>
+	<br>
+	<form action="http://yandex.ru/yandsearch" method="post" target="_blank">
+		<input name="text" value="" placeholder="Yandex..."
+			style="
+			color: rgb(25, 25, 25); 
+			border: 1px solid rgb(100, 100, 100); 
+			padding: 5px 2px 5px 30px; 
+			background: url(images/yandex.png) no-repeat scroll 1% 50% rgb(240, 240, 240);">
+	</form>
+	<br>
 	<form action="https://myzuka.org/search" method="post" target="_blank">    
-        <input type="text" id="myzuka" name="SearchText" value="" placeholder="Myzuka..."
+        <input name="SearchText" value="" placeholder="Myzuka..."
 		style="
 			color: rgb(25, 25, 25); 
 			border: 1px solid rgb(100, 100, 100); 
-			padding: 5px 2px 5px 28px; 
-			background: url(images/google.png) no-repeat scroll 1% 50% rgb(240, 240, 240);">
-<!--     <input type="submit" value="Поиск" class="submit"> -->
+			padding: 5px 2px 5px 30px; 
+			background: url(images/myzuka.png) no-repeat scroll 1% 50% rgb(240, 240, 240);">
 	</form>
-	
-	<form action="http://www.google.com/search"  target="_blank">
-	<input id="google" class="search_string silver" name="q" value="Google">
-	<input class="submit" type="submit" value="Найти">
-	</form>
-	
-	<form action="http://yandex.ru/yandsearch"  target="_blank">
-	<input id="yandex" class="search_string silver" name="text" value="Яндекс">
-	<input class="submit" type="submit" value="Найти">
-	</form>
-	
+	<br>
 	<form action="http://rutracker.org/forum/tracker.php"  target="_blank">
-		<input id="rutracker" class="search_string silver" name="nm" value="RuTracker">
-		<input class="submit" type="submit" value="Найти">
+		<input name="nm" value="" placeholder="Rutracker..."
+		style="
+			color: rgb(25, 25, 25); 
+			border: 1px solid rgb(100, 100, 100); 
+			padding: 5px 2px 5px 30px; 
+			background: url(images/rutracker.png) no-repeat scroll 1% 50% rgb(240, 240, 240);">
 	</form>
 	
-	<form action="http://www.kinopoisk.ru/index.php" onsubmit="var i = getElementById(&#39;kinopoisk&#39;); var value = i.value; value= escape(value); var utf, win, pos=value.indexOf(&#39;%u&#39;); while (pos &gt; -1) {utf = value.substring(pos, pos+6);win = &#39;%&#39; + (&#39;BCDEF&#39;).charAt(utf.charAt(4)) + utf.charAt(5);value = value.replace(utf, win);pos = value.indexOf(&#39;%u&#39;); } getElementById(&#39;kinopoisk1&#39;).value = value; return 0;"  target="_blank">
-	<input id="kinopoisk1" type="hidden" name="kp_query">
-	<input id="kinopoisk" class="search_string silver" value="КиноПоиск">
-	<input class="submit" type="submit" value="Найти">
-	</form>
-
+	<!-- ---------------------------------- -->
+	
 </body> 
 </html>
