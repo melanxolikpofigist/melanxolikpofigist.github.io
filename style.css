@@ -1,3 +1,94 @@
+/*Вертикальные табы { */
+
+* {margin: 0; padding: 0;}
+body {margin: 30px; font: 13px/1.5 "Trebuchet MS", Tahoma, Arial;}
+a {color: #0094D6;}
+p {padding: 7px 0;}
+h1 {font-size: 21px; font-weight: normal; margin: 0 0 30px;}
+
+.section {
+	width: 600px;
+	background: #00EFEF;
+	margin: 30px;
+}
+ul.tabs {
+	height: 28px;
+	line-height: 25px;
+	list-style: none;
+	border-bottom: 1px solid #DDD;
+	background: #FFF;
+}
+.tabs li {
+	float: left;
+	display: inline;
+	margin: 0 1px -1px 0;
+	padding: 0 13px 1px;
+	color: #777;
+	cursor: pointer;
+	background: #F9F9F9;
+	border: 1px solid #E4E4E4;
+	border-bottom: 1px solid #F9F9F9;
+	position: relative;
+}
+.tabs li:hover,
+.vertical .tabs li:hover {
+	color: #F70;
+	padding: 0 13px;
+	background: #FFFFDF;
+	border: 1px solid #FFCA95;
+}
+.tabs li.current {
+	color: #444;
+	background: #EFEFEF;
+	padding: 0 13px 2px;
+	border: 1px solid #D4D4D4;
+	border-bottom: 1px solid #EFEFEF;
+}
+.box {
+	display: none;
+	border: 1px solid #D4D4D4;
+  border-width: 0 1px 1px;
+	background: #EFEFEF;
+	padding: 0 12px;
+}
+.box.visible {
+	display: block;
+}
+
+.section.vertical {
+	width: 75%;
+	border-left: 160px solid #FFF;
+}
+.vertical .tabs {
+	width: 160px;
+	float: left;
+	display: inline;
+	margin: 0 0 0 -160px;
+}
+.vertical .tabs li {
+	padding: 0 13px;
+	margin: 0 0 1px;
+	border: 1px solid #E4E4E4;
+	border-right: 1px solid #F9F9F9;
+	width: 132px;
+	height: 25px;
+}
+.vertical .tabs li:hover {
+	width: 131px;
+}
+.vertical .tabs li.current {
+	width: 133px;
+	color: #444;
+	background: #EFEFEF;
+	border: 1px solid #D4D4D4;
+  border-right: 1px solid #EFEFEF;
+  margin-right: -1px;
+}
+.vertical .box {
+  border-width: 1px;
+}
+/*Вертикальные табы } */
+
 
 
 
@@ -89,13 +180,14 @@ display: block;
 
 
 form{
+        width: 200px;
   		border: 1px solid rgb(100, 100, 100); 
 			padding: 5px 5px 5px 5px; 
 			background: rgb(240, 240, 240);
       }
 
 .search{		
-      width: 80%;
+
       border: 1px solid rgb(100, 100, 100); 
 			color: rgb(25, 25, 25); 
 			padding: 5px 2px 5px 30px; 
@@ -157,8 +249,9 @@ border-bottom: 1px dotted #9F1D35;
     }
 }
 
-/* Спойлер */
+/* Спойлер {*/
 spoilcnt{margin: 0px;  padding: 6px;  border: 1px inset; width: 200px}
 smallfont{margin-bottom:2px;width:100%}
 spoil{margin:10px; margin-top:5px;}
 input.input-button{width:100%}
+/* Спойлер }*/
